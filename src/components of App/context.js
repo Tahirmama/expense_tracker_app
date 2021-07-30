@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 
 // Import the Reducer
-import AppReducer from './AppReducer';
+import Reducer from './AppReducer';
 
 // Create the initial state
 const initialState = {
@@ -16,7 +16,7 @@ export const GlobalContext = createContext(initialState);
 //through this provider we give acces to our transactions
  //using children here to give access to all our component like header,balance,etc
 export const GlobalProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AppReducer, initialState);
+    const [state, dispatch] = useReducer(Reducer, initialState);
 
     // Actions for Transactions
 
